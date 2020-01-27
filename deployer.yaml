@@ -1,0 +1,11 @@
+apiVersion: knative.projectriff.io/v1alpha1
+kind: Deployer
+metadata:
+  name: riff-spring-boot
+  namespace: default
+spec:
+  ingressPolicy: External
+  template:
+    spec:
+      containers:
+        - image: docker.io/trisberg/hello-boot
